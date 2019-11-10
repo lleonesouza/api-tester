@@ -5,13 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
+    "dev": "webpack --mode development --config webpack.config.js --watch",
     "build": "webpack --mode production"
   },
-  "author": "",
+  "author": "Leone de Souza <lleonesouza@live.com>",
   "license": "ISC",
   "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "immer": "^5.0.0",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-i18next": "^11.1.0",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^5.1.2",
+    "react-spring": "^8.0.27",
+    "use-immer": "^0.3.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
