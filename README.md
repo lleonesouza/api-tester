@@ -1,24 +1,24 @@
 <h1> Automatic Cron Test for API REST in Electron</h1>
 
-How install:
+<h2>How install: </h2>
 
 yarn install
 
-How start dev:
+<h2>How start dev: </h2>
 
 yarn run dev && yarn run electron
 
-How build client: 
+<h2>How build client:  </h2>
 
 yarn run build
 
-How compile: 
+<h2> How compile:  </h2>
 
-Mac
+
 yarn run package-mac
 
-Linux
+
 yarn run package-linux
 
-Windows
+
 yarn run package-win
