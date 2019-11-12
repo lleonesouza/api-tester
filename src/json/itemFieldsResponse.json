@@ -1,0 +1,70 @@
+[
+    {
+      "title": "title",
+      "type": "String",
+      "required": "true",
+      "description": "String with title of Product"
+    },
+    {
+      "title": "img",
+      "type": "Array",
+      "required": "true",
+      "description": "Array of Images Buffers or Object of Videos"
+    },
+    {
+      "title": "price",
+      "type": "Number",
+      "required": "true",
+      "description": "Number or Float Value"
+    },
+    {
+      "title": "currency",
+      "type": "STRING",
+      "required": "true",
+      "description": "String that can be -BRL- -USL- -LBR-"
+    },
+    {
+      "title": "quantity",
+      "type": "NUMBER",
+      "required": "true",
+      "description": "INT Number"
+    },
+    {
+      "title": "description",
+      "type": "STRING",
+      "required": "true",
+      "description": "String with description of item"
+    },
+    {
+      "title": "ml",
+      "type": "BOOLEAN",
+      "required": "true",
+      "description": "True or False for autosync mercadolivre"
+    },
+    {
+      "title": "condition",
+      "type": "STRING",
+      "required": "true",
+      "description": "String that can be - -, - - "
+    },
+    {
+      "title": "warranty",
+      "type": "STRING",
+      "required": "true",
+      "description": "String that can be - -, - - "
+    },
+    {
+      "title": "correio_id",
+      "type": "STRING",
+      "required": "false",
+      "description": "ID of correios",
+      "relation": "correio"
+    },
+    {
+      "title": "categorie_id",
+      "type": "STRING",
+      "required": "true",
+      "description": "ID of categories",
+      "relation": "categorie"
+    }
+]

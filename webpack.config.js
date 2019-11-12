@@ -1,10 +1,7 @@
 const path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-
-
 module.exports = {
-    target: 'node',
     entry: './src/client.js',
     output: {
         filename: 'bundle.js',
