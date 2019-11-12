@@ -2,7 +2,7 @@
 
 how start dev:
 
-yarn run dev $$ yarn run electron
+yarn run dev && yarn run electron
 
 how to build: 
 
