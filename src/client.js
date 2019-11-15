@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from '@emotion/styled'
+import isElectron from 'is-electron';
+
 // Components
 import Main from "./components/main/main";
+
 
 let Wrapper = styled.div({
     backgroundColor: '#282c34',
@@ -21,13 +24,12 @@ export default function App() {
     <Wrapper>
       <h1>Referencias da API</h1>
 
-      <Main />
-
-      
+        {isElectron() ? <Main /> : <h1>you are not in desktop environment</h1>}   
 
       <br/><br/><br/>
+
     </Wrapper>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

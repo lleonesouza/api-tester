@@ -1,26 +1,22 @@
-import React from "react";
-import isElectron from 'is-electron';
+import React, {Fragment} from "react";
 const EventEmitter = require('events');
 class MyEmitter extends EventEmitter {}
 const myEmitter = new MyEmitter();
 
 // Components
-import Ipc from "./src/ipc/ipc";
-import Requests from './src/requests/requests'
-import HoverIn from './src/hoverIn/hoverIn'
+import TesterPanel from "./src/testerPanel/testerPanel";
+import Requests from './src/requestsList/requests_suspense'
+
 
 export default function main() {
   console.log('rendering')
   return (
-    <div>
-      {isElectron() ? <Ipc  myEmitter={myEmitter}/> : null}
+    <Fragment>
 
-        <HoverIn myEmitter={myEmitter}/>
+      <TesterPanel />
 
- 
-          
-        <Requests myEmitter={myEmitter}/>
+      <Requests />
 
-    </div>
+    </Fragment>
   );
 }

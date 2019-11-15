@@ -1,24 +1,18 @@
 const electron = require("electron");
-const handler = require("./electron/handlers");
-const { app, Menu, ipcMain } = electron;
-const os = require('os')
-const path = require('path')
-
-process.env.NODE_ENV = '!production';
-require('electron-reload')(__dirname,{
-  electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+const { main } = require("./electron/window/index");
+const { app, Menu } = electron;
+const path = require("path");
+require("electron-reload")(__dirname, {
+  electron: path.join(__dirname, "node_modules", ".bin", "electron")
 });
+process.env.NODE_ENV = "!production";
 
 // Listing App
 app.on("ready", () => {
-  handler.mainWindow(app);
-
-  // console.log(os.type())
-  // console.log(path.parse(__filename).dir)
-  // console.log(path.parse(__dirname))
-
+  // Load Windows
+  main(app);
+  // Set Up Custom Manu
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-
   Menu.setApplicationMenu(mainMenu);
 });
 
@@ -55,7 +49,7 @@ if (process.platform == "darwin") {
 if (process.env.NODE_ENV !== "production") {
   mainMenuTemplate.push({
     label: "Developer Tools",
-    submenu:[
+    submenu: [
       {
         label: "Toggle DevTools",
         accelerator: process.platform == "darwin" ? "Command+I" : "Ctrl+I",
@@ -64,7 +58,7 @@ if (process.env.NODE_ENV !== "production") {
         }
       },
       {
-          role: 'reload'
+        role: "reload"
       }
     ]
   });
