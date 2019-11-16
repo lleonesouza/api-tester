@@ -7,7 +7,6 @@ const myEmitter = new MyEmitter();
 import TesterPanel from "./testerPanel/testerPanel";
 import Requests from './requestsList/requests_suspense'
 
-
 export default function main() {
   return (
     <Fragment>

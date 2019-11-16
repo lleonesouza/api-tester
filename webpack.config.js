@@ -3,12 +3,15 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
-        index: './src/client.js',
-        config: './src/client.js',
-        newMethod: './src/client.js',
-        newServer: './src/client.js',
-        cron: './src/client.js',
-        docker: './src/client.js',
+        index: './src/windows/main/client.js',
+        config: './src/windows/wconfig/wconfig/client.js',
+        docker: './src/windows/wconfig/wdocker/client.js',
+        context: './src/windows/wconfig/context/client.js',
+        newMethod: './src/windows/newMethod/client.js',
+        newServer: './src/windows/newServer/client.js',
+        cron: './src/windows/wcron/client.js',
+        author: './src/windows/wdocker/author/client.js',
+        donate: './src/windows/wdocker/donate/client.js',
     },
     output: {
         filename: '[name]/bundle.js',

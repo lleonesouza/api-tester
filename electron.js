@@ -18,22 +18,98 @@ app.on("ready", () => {
 
 const mainMenuTemplate = [
   {
-    label: "File",
+    label: "New",
     submenu: [
       {
-        label: "Add Item",
+        label: "new Request",
         click() {
           handler.createAddWindow();
         }
       },
       {
-        label: "Create Item"
+        label: "new Test",
+        click() {
+          handler.createAddWindow();
+        }
+      },
+      {
+        label: "new Server"
+      },
+      {
+        label: "new Expose"
       },
       {
         label: "Quit",
         accelerator: process.platform === "darwin" ? "Command+Q" : "Ctrl+Q",
         click() {
           app.quit();
+        }
+      }
+    ]
+  },
+
+  {
+    label: "DataBases",
+    submenu: [
+      {
+        label: "MongoDB",
+        click() {
+          handler.createAddWindow();
+        }
+      },
+      {
+        label: "PostgreeSQL",
+        click() {
+          handler.createAddWindow();
+        }
+      },
+      {
+        label: "Redis",
+        click() {
+          handler.createAddWindow();
+        }
+      }
+    ]
+  },
+  
+  {
+    label: "Config",
+    submenu: [
+      {
+        label: "Contexts",
+        click() {
+          handler.createAddWindow();
+        }
+      },
+      {
+        label: "Docker",
+        click() {
+          handler.createAddWindow();
+        }
+      },
+      {
+        label: "Config",
+        click() {
+          handler.createAddWindow();
+        }
+      }
+    ]
+  },
+
+
+  {
+    label: "Software",
+    submenu: [
+      {
+        label: "Author",
+        click() {
+          handler.createAddWindow();
+        }
+      },
+      {
+        label: "Donate",
+        click() {
+          handler.createAddWindow();
         }
       }
     ]
