@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import itemFields from "./json/itemFields";
+import itemFields from "./json/itemFields.json";
 
 const postsInitialState = [
   {

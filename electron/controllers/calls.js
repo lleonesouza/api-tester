@@ -1,4 +1,5 @@
 var {user,product,categorie,correio} = require("./getFakeData");
+const axios = require('axios')
 const R = require('ramda');
 
 var useAxios = async r => {

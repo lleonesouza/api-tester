@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es6",
+        "allowJs": true,
+        "jsx": "react",
+        "suppressImplicitAnyIndexErrors": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+    }
+}

@@ -26,7 +26,7 @@ export default function Ipc(props) {
       <button onClick={() => {get()}}>Cl</button>
       <h2>  Normal || Async || Sync </h2>
       <h2>  POSTS || GETS || PUTS || DELS </h2> 
-      <h2>  /users || /products || /categories  </h2> 
+      <h2>  /users || /products || /categoriess  </h2> 
      <h2> Post Categorie OK <br/> Calling Post Product...</h2>
     </Fragment>
   );

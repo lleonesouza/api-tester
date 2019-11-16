@@ -3,6 +3,7 @@ const { BrowserWindow } = electron;
 const url = require("url");
 const path = require("path");
 const {makeTest} = require('../routes/routes')
+const {newContext} = require('../controllers/context')
 
 var saveReport = r => {
   console.log("save r");
@@ -28,6 +29,10 @@ var handleReports = r => {
   }
 };
 
+
+
+
+
 var main = app => {
   let mainWindow = new BrowserWindow({
     webPreferences: {
@@ -42,6 +47,19 @@ var main = app => {
       slashes: true
     })
   );
+
+  var Context = {
+    type: 'context',
+    title: 'name23',
+    context: 'mongoDB',
+    cache: false,
+    description: '',
+    requests: [{name: 'd'}, {name: 'c'}]
+  }
+
+  newContext(Context).then(res => console.log(res)).catch(e => console.log(e))
+
+
 
   mainWindow.on("closed", () => {
     app.quit();
