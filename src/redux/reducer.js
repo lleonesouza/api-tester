@@ -1,5 +1,5 @@
-import React, { createContext } from "react"
-import itemFields from '../json/itemFields'
+import React, { createContext } from "react";
+import itemFields from "./json/itemFields";
 
 const postsInitialState = [
   {
@@ -8,7 +8,7 @@ const postsInitialState = [
     method: "post",
     description: "Add a new product to Store",
     url: "/users",
-    fields: 'itemFields',
+    fields: itemFields,
     data: null,
     axios: null,
     lastUpdate: null,
@@ -20,7 +20,7 @@ const postsInitialState = [
     method: "post",
     description: "Add a new product to Store",
     url: "/categories",
-    fields: 'itemFields',
+    fields: itemFields,
     data: null,
     axios: null,
     lastUpdate: null,
@@ -32,7 +32,7 @@ const postsInitialState = [
     method: "post",
     description: "Add a new product to Store",
     url: "/items",
-    fields: 'itemFields',
+    fields: itemFields,
     data: null,
     axios: null,
     lastUpdate: null,
@@ -44,44 +44,38 @@ const postsInitialState = [
     method: "post",
     description: "Add a new product to Store",
     url: "/correios",
-    fields: 'itemFields',
+    fields: itemFields,
     data: null,
     axios: null,
     lastUpdate: null,
     requestTime: null
   }
-]
-
-
+];
 
 var postReducer = (draft, action) => {
   switch (action.type) {
     case "CREATE_USER":
-      draft[0] = action.data
-      return  [...draft]   ;
+      draft[0] = action.data;
+      return [...draft];
     case "CREATE_CATEGORIE":
-        draft[1] = action.data
+      draft[1] = action.data;
       return [...draft];
     case "CREATE_ITEM":
-        draft[2] = action.data
-      return [ ...draft ];
+      draft[2] = action.data;
+      return [...draft];
     case "CREATE_CORREIO":
-        draft[3] = action.data
-      return [...draft]
+      draft[3] = action.data;
+      return [...draft];
     case "LOADING":
       return { ...draft, loading: false };
     default:
       return [...postsInitialState];
   }
-}
+};
 
-const PostContext = createContext(postsInitialState)
+const PostContext = createContext(postsInitialState);
 
-
-var usePostRedux = { postReducer, postsInitialState, PostContext };
-var getReducer = { postReducer, postsInitialState, PostContext };
-var putReducer = { postReducer, postsInitialState, PostContext };
-var delReducer = { postReducer, postsInitialState, PostContext };
+export { postReducer, postsInitialState, PostContext };
 
 
 let item = {
@@ -97,7 +91,6 @@ let item = {
   correio_id: "",
   categorie_id: ""
 };
-
 
 let resquest = {
   buffer: [],
@@ -116,6 +109,3 @@ let resquest = {
   width: 0,
   weight: 0
 };
-
-
-export { usePostRedux };

@@ -4,12 +4,11 @@ class MyEmitter extends EventEmitter {}
 const myEmitter = new MyEmitter();
 
 // Components
-import TesterPanel from "./src/testerPanel/testerPanel";
-import Requests from './src/requestsList/requests_suspense'
+import TesterPanel from "./testerPanel/testerPanel";
+import Requests from './requestsList/requests_suspense'
 
 
 export default function main() {
-  console.log('rendering')
   return (
     <Fragment>
 

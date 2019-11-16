@@ -2,7 +2,7 @@ const electron = require("electron");
 const { BrowserWindow } = electron;
 const url = require("url");
 const path = require("path");
-const {startRequests} = require('../routes/routes')
+const {makeTest} = require('../routes/routes')
 
 var saveReport = r => {
   console.log("save r");
@@ -48,9 +48,7 @@ var main = app => {
   });
 
   // ROUTES
-  startRequests(mainWindow)
-  
-
+  makeTest(mainWindow)
 };
 
 module.exports = { main };

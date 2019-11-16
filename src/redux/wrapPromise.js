@@ -1,7 +1,4 @@
-const {usePostRedux} = require('./reducer')
-const {makeTest} = require('./actions')
-
-const wrapPromise = (promise) => {
+export const wrapPromise = (promise) => {
     let status = 'pending';
     let result = '';
     let suspender = promise.then(r => {
@@ -21,13 +18,5 @@ const wrapPromise = (promise) => {
             }
             return result
         }
-    }
-}
-
-let r = usePostRedux.postsInitialState
-
-export const createResource = () => {
-    return {
-        startCompleteTest: wrapPromise( makeTest(r) )
     }
 }

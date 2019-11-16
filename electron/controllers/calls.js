@@ -94,13 +94,13 @@ module.exports = {
     requests.map(async r => {
       try {
         let prevR = await populateRequest(r);
-        console.log(prevR)
+        console.log(prevR);
         // handleReports(prevR);
         requestArray.push(prevR);
       } catch (e) {
         console.log(e);
       }
-    return requestArray;
+      return requestArray;
     });
   },
 
@@ -128,6 +128,19 @@ module.exports = {
         console.log(e);
       }
     });
+  },
+
+  test: async (mainWindow, r) => {
+    try {
+      console.log("init request", r.title);
+      r = await populateRequest(r);
+      // handleReports(req)
+      // mainWindow.webContents.send("completeRequest", r);
+      console.log("finish request", r.title);
+      return r;
+    } catch (e) {
+      console.log(e);
+    }
   },
 
   testPostSync: (Request, mainWindow) => {

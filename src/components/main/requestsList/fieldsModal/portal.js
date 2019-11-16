@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { CloseButton, ModalDiv } from "./css";
 import Fields from "./fields";
 import { Transition, animated } from "react-spring/renderprops.cjs";
-import CloseLottie from '../../../../lotties/close'
+import CloseLottie from '../../../lotties/close'
 
 function Modal(props) {
   var fields = props.fields

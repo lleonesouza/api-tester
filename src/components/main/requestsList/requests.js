@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { MethodsDiv, MethodsUl, MethodsLi } from "./methods/css";
 import MethodPortal from "./fieldsModal/portal";
 import { GhostlyDiv } from "./fieldsModal/css";
-import { usePostRedux } from "../../../../redux/reducer";
+import { usePostRedux } from "../../../redux/reducer";
 import Method from './methods/methods'
 
 export default function Requests(props) {

@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState, Fragment } from "react";
+import  PortalFields  from "../fieldsModal/portal";
 import { MethodsUl, MethodsLi } from "./css";
+import { GhostlyDiv } from '../fieldsModal/css'
 
-export default function methods({method}) {
-  console.log(method)
-    return (
-        <MethodsUl onClick={() => onClick(method.fields)}>
+export default function method({ resource }) {
+  var method = resource.result.read();
+  let [show, setShow] = useState(false);
+  return (
+    <Fragment>
+      {show ? <GhostlyDiv onClick={() => setShow(false)} /> : null}
+
+      {method.fields === "itemFields" ? null : (
+        <PortalFields show={show} setShow={setShow} fields={method.fields} />
+      )}
+
+      <MethodsUl onClick={() => setShow(!show)}>
         <MethodsLi> {method.title} </MethodsLi>
         <MethodsLi>
           {method.status === 401 ? (
@@ -21,5 +31,6 @@ export default function methods({method}) {
         <MethodsLi> {method.description} </MethodsLi>
         <MethodsLi> {method.url} </MethodsLi>
       </MethodsUl>
-    )
+    </Fragment>
+  );
 }
