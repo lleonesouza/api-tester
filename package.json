@@ -29,7 +29,7 @@
     "node-command-line": "^1.0.2",
     "progress": "^2.0.3",
     "ramda": "^0.26.1",
-    "react": "^0.0.0-experimental-38dd17ab9",
+    "react": "^0.14.0",
     "react-dom": "^0.0.0-experimental-38dd17ab9",
     "react-i18next": "^11.1.0",
     "react-lottie": "^1.2.3",
