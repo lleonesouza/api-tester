@@ -24,7 +24,7 @@
     "axios-timing": "^1.0.2",
     "electron-json-storage": "^4.1.8",
     "faker": "^4.1.0",
-    "immer": "^5.0.0",
+    "immer": "^9.0.6",
     "is-electron": "^2.2.0",
     "node-command-line": "^1.0.2",
     "progress": "^2.0.3",
